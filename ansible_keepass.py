@@ -154,7 +154,7 @@ class KeepassXC(KeepassBase):
         try:
             logins = self.connection.get_logins(
                 self.identity,
-                url='ssh:{}'.format(host_name)
+                url='ssh://{}'.format(host_name)
             )
         except ProtocolError:
             return
